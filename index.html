@@ -486,7 +486,7 @@ const inr=n=>'₹'+n.toLocaleString('en-IN');
 
 /* ---------- render ---------- */
 const SIMG=["wash", "s-interior", "s-ceramic", "s-ppf", "s-teflon", "s-wrap", "s-polish", "s-rust"];
-$('#htrack').innerHTML=SERVICES.map((s,i)=>`<article class="scard${s.hl?' hl':''}" id="svc-${i}"><div class="im"><img src="img/${SIMG[i]}.jpg" alt="${s.k}" loading="lazy"></div><div class="num">0${i+1}</div><span class="shine"></span><div><h3>${s.k}</h3><p>${s.d}</p><ul>${s.t.map(t=>`<li>${t}</li>`).join('')}</ul><div class="pr"><span>from</span><b>${inr(s.p.car)}</b></div></div></article>`).join('');
+$('#htrack').innerHTML=SERVICES.map((s,i)=>`<article class="scard${s.hl?' hl':''}" id="svc-${i}"><div class="im"><img src="img/${SIMG[i]}.jpg" alt="${s.k}"></div><div class="num">0${i+1}</div><span class="shine"></span><div><h3>${s.k}</h3><p>${s.d}</p><ul>${s.t.map(t=>`<li>${t}</li>`).join('')}</ul><div class="pr"><span>from</span><b>${inr(s.p.car)}</b></div></div></article>`).join('');
 $('#fsvc').innerHTML=SERVICES.map(s=>`<option>${s.k}</option>`).join('')+['Silver','Gold','Crystal'].map(p=>`<option>${p} yearly plan</option>`).join('');
 $('#rtrack').innerHTML=[...REVIEWS,...REVIEWS].map(r=>`<div class="rev"><div class="st">★★★★★</div><p>“${r[0]}”</p><b>${r[1]}</b> <span>· ${r[2]}</span></div>`).join('');
 
