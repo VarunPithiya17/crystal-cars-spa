@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crystal Cars Spa — Detailing · Protection · Perfection | Ahmedabad</title>
+<meta name="description" content="Premium car & bike detailing in Ahmedabad. Foam wash, interior deep clean, ceramic & Teflon coating, PPF, wrapping and polishing for cars, bikes and scooters.">
+<link rel="preload" href="fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/anton-400.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+20B9, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/inter-400.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+20B9, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/inter-500.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+20B9, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/inter-600.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+20B9, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+:root{--bg:#07080a;--bg2:#0e1013;--line:#ffffff14;--fg:#f3f1ec;--mute:#8d8f94;--o:#ff6a13;--o2:#ff9a3c;--ease:cubic-bezier(.16,1,.3,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto;overflow-x:clip}
+body{background:var(--bg);color:var(--fg);font:400 16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.d{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:.9;font-weight:400}
+.o{color:var(--o)}.wrap{width:min(1320px,100% - 32px);margin-inline:auto}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--o);display:flex;gap:12px;align-items:center}
+.eyebrow:before{content:"";width:28px;height:1px;background:var(--o)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.04em;position:relative;overflow:hidden;isolation:isolate;transition:color .4s}
+.btn-o{background:var(--o);color:#0a0a0a}
+.btn-o:after,.btn-g:after{content:"";position:absolute;inset:0;background:var(--fg);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1;border-radius:inherit}
+.btn:hover:after{transform:none}
+.btn-g{border:1px solid #ffffff33}.btn-g:hover{color:#0a0a0a}
+section{position:relative}
+/* grain */
+body:before{content:"";position:fixed;inset:-50%;z-index:90;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr 1s steps(4) infinite}
+@keyframes gr{50%{transform:translate(3%,-4%)}}
+/* loader */
+#loader{position:fixed;inset:0;z-index:200;background:var(--bg);display:grid;place-items:center}
+#loader .ln{font-size:clamp(48px,10vw,140px);overflow:hidden}
+#loader .ln span{display:inline-block}
+#loader .bar{position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--o)}
+#loader .pct{position:absolute;right:24px;bottom:20px;font:600 13px Inter;color:var(--mute);letter-spacing:.2em}
+/* cursor */
+#cur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:var(--o);pointer-events:none;z-index:150;mix-blend-mode:difference;transform:translate(-50%,-50%);transition:width .3s,height .3s}
+#cur.big{width:70px;height:70px}
+@media (hover:none){#cur{display:none}}
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 0;transition:background .4s,padding .4s}
+header.solid{background:#07080acc;backdrop-filter:blur(14px);padding:10px 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font:400 20px Anton;letter-spacing:.06em}
+.logo svg{width:44px}
+.logo small{display:block;font:500 9px Inter;letter-spacing:.3em;color:var(--mute)}
+.nav-links{display:flex;gap:32px;font-size:14px;color:#cfd0d2}
+.nav-links a{position:relative}.nav-links a:after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:var(--o);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.nav-links a:hover:after{transform:scaleX(1);transform-origin:left}
+.nav-r{display:flex;gap:10px;align-items:center}
+.ico{width:46px;height:46px;border-radius:50%;border:1px solid #ffffff26;display:grid;place-items:center;transition:background .3s,border-color .3s}
+.ico:hover{background:var(--o);border-color:var(--o);color:#000}
+.burger span{display:block;width:18px;height:1.5px;background:currentColor;margin:4px 0;transition:transform .4s}
+body.menu-open .burger span:first-child{transform:translateY(2.75px) rotate(45deg)}
+body.menu-open .burger span:last-child{transform:translateY(-2.75px) rotate(-45deg)}
+@media(max-width:1100px){.nav-r .btn{display:none}}@media(max-width:960px){.nav-links{display:none}}@media(max-width:600px){.logo small{display:none}.logo{font-size:17px}.logo svg{width:36px}.ico{width:42px;height:42px}}
+/* menu overlay */
+#menu{position:fixed;inset:0;z-index:95;background:var(--bg2);clip-path:circle(0 at calc(100% - 50px) 40px);transition:clip-path .9s var(--ease);display:flex;flex-direction:column;justify-content:center}
+body.menu-open #menu{clip-path:circle(150% at calc(100% - 50px) 40px)}
+#menu nav a{display:block;font-size:clamp(44px,8vw,110px);overflow:hidden;transition:color .3s}
+#menu nav a:hover{color:var(--o)}
+#menu nav a span{display:inline-block;transform:translateY(105%);transition:transform .8s var(--ease)}
+body.menu-open #menu nav a span{transform:none}
+#menu nav a:nth-child(2) span{transition-delay:.05s}#menu nav a:nth-child(3) span{transition-delay:.1s}#menu nav a:nth-child(4) span{transition-delay:.15s}#menu nav a:nth-child(5) span{transition-delay:.2s}#menu nav a:nth-child(6) span{transition-delay:.25s}
+#menu .meta{margin-top:40px;display:flex;flex-wrap:wrap;gap:24px 48px;color:var(--mute);font-size:14px}
+/* search */
+#search{position:fixed;inset:0;z-index:120;background:#07080af2;backdrop-filter:blur(20px);opacity:0;visibility:hidden;transition:.4s;padding-top:14vh}
+#search.on{opacity:1;visibility:visible}
+#search input{width:100%;background:none;border:0;border-bottom:1px solid #ffffff33;color:var(--fg);font:400 clamp(32px,6vw,72px) Anton;text-transform:uppercase;padding:12px 0;outline:none}
+#search input::placeholder{color:#ffffff30}
+#sres{margin-top:28px;display:grid;gap:2px;max-height:55vh;overflow:auto}
+#sres a{display:flex;justify-content:space-between;gap:16px;padding:18px 20px;background:var(--bg2);border-radius:10px;transition:background .3s}
+#sres a:hover{background:#1a1c20}#sres a b{font-weight:600}#sres a span{color:var(--mute);font-size:14px}
+#sres .tag{color:var(--o)}
+.close{position:absolute;top:24px;right:24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips button{padding:8px 16px;border:1px solid var(--line);border-radius:99px;font-size:13px;color:var(--mute)}
+.chips button:hover{color:var(--fg);border-color:var(--o)}
+/* hero */
+#hero{height:100svh;min-height:640px;overflow:hidden;display:flex;align-items:flex-end;padding-bottom:7vh}
+#hero .bg{position:absolute;inset:-8% 0 0;background:url(img/hero.jpg) center/cover;filter:grayscale(.2) contrast(1.1) brightness(.55)}
+#hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07080a55,transparent 30%,#07080a 96%),radial-gradient(ellipse at 70% 40%,transparent 30%,#07080acc)}
+#hero h1{font-size:clamp(64px,13.5vw,220px);position:relative}
+#hero h1 .l{display:block;overflow:hidden;padding-top:.04em}
+#hero h1 .l>span{display:inline-block}
+#hero h1 .stroke{-webkit-text-stroke:1.5px var(--fg);color:transparent}
+.hero-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:32px;flex-wrap:wrap}
+.hero-row p{max-width:430px;color:#c4c5c8}
+.hero-badge{position:absolute;right:4vw;top:22vh;width:150px;height:150px}
+.hero-badge svg{animation:spin 16s linear infinite}
+.hero-badge b{position:absolute;inset:0;display:grid;place-items:center;font:400 32px Anton;color:var(--o)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:700px){.hero-badge{width:100px;height:100px;top:16vh}}
+/* drops canvas */
+#drops{position:absolute;inset:0;pointer-events:none}
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;padding:22px 0;background:var(--o);color:#0a0a0a;transform:rotate(-1.5deg) scale(1.03);margin:6vh 0}
+.marq .t{display:flex;width:max-content;animation:mq 30s linear infinite}
+.marq span{font:400 clamp(28px,4vw,56px) Anton;text-transform:uppercase;padding-right:48px;white-space:nowrap}
+.marq span i{font-style:normal;-webkit-text-stroke:1.5px #0a0a0a;color:transparent}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* intro */
+.intro{padding:14vh 0}
+.intro h2{font-size:clamp(34px,5.2vw,82px);max-width:1150px;line-height:1}
+.intro h2 .w{display:inline-block;opacity:.12}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:10vh;border-top:1px solid var(--line)}
+.stats div{padding:28px 20px 0 0}
+.stats b{font:400 clamp(48px,6vw,96px) Anton;display:block;color:var(--fg)}
+.stats b em{font-style:normal;color:var(--o)}
+.stats span{color:var(--mute);font-size:14px}
+@media(max-width:700px){.stats{grid-template-columns:1fr 1fr;gap:24px}}
+/* vehicles */
+.veh{padding:6vh 0 14vh}
+.sec-h{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:6vh;flex-wrap:wrap}
+.sec-h h2{font-size:clamp(48px,8vw,128px)}
+.vgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;height:72vh;min-height:520px}
+.vcard{position:relative;border-radius:18px;overflow:hidden;background:var(--bg2)}
+.vcard img{width:100%;height:100%;object-fit:cover;transform:scale(1.15);transition:transform 1.2s var(--ease),filter .6s;filter:brightness(.6)}
+.vcard:hover img{transform:scale(1.05);filter:brightness(.8)}
+.vcard .cap{position:absolute;left:24px;right:24px;bottom:24px}
+.vcard .cap b{font:400 clamp(36px,4vw,64px) Anton;text-transform:uppercase;display:block;line-height:1}
+.vcard .cap span{color:#cfd0d2;font-size:14px}
+.vcard .n{position:absolute;top:20px;left:24px;font:600 12px Inter;letter-spacing:.3em;color:var(--o)}
+@media(max-width:900px){.vgrid{grid-template-columns:1fr;height:auto}.vcard{height:60vh}}
+/* horizontal services */
+#services{background:var(--bg2)}
+.hpin{height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
+.htrack{display:flex;gap:20px;padding-left:max(16px,calc((100vw - 1320px)/2));width:max-content}
+.scard{width:min(420px,80vw);height:min(560px,62vh);flex:none;border:1px solid var(--line);border-radius:20px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;background:var(--bg);transition:border-color .4s}
+.scard:hover{border-color:var(--o)}
+.scard:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,50%) var(--my,0%),#ff6a1333,transparent 55%);opacity:0;transition:opacity .4s}
+.scard:hover:before{opacity:1}
+.scard .num{font:400 120px Anton;color:transparent;-webkit-text-stroke:1px #ffffff22;line-height:.8}
+.scard h3{font:400 44px Anton;text-transform:uppercase;line-height:.95;margin-bottom:14px}
+.scard p{color:var(--mute);font-size:15px}
+.scard ul{list-style:none;margin-top:18px;display:flex;flex-wrap:wrap;gap:6px}
+.scard li{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:99px;color:#c4c5c8}
+.scard .pr{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.scard .pr b{font:400 28px Anton;color:var(--o)}
+.scard.hl{background:var(--o);color:#0a0a0a}.scard.hl p,.scard.hl li{color:#1c1c1c}.scard.hl li{border-color:#0002}.scard.hl .num{-webkit-text-stroke-color:#0003}.scard.hl .pr b{color:#0a0a0a}.scard.hl .pr{border-color:#0002}
+@media(max-width:800px){.hpin{height:auto;padding:12vh 0}.htrack{width:auto;flex-direction:column;padding:0 16px}.scard{width:100%;height:auto;gap:28px}}
+/* before after */
+.ba{padding:14vh 0}
+.bawrap{position:relative;aspect-ratio:16/8;border-radius:20px;overflow:hidden;cursor:ew-resize;user-select:none;touch-action:pan-y}
+.bawrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bawrap .bef{filter:grayscale(1) brightness(.45) contrast(.8) sepia(.5) blur(.6px)}
+.bawrap .aft{clip-path:inset(0 0 0 var(--p,50%));filter:contrast(1.12) saturate(1.2)}
+.bawrap .hd{position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:var(--o);transform:translateX(-1px)}
+.bawrap .hd:after{content:"⟷";position:absolute;top:50%;left:50%;width:58px;height:58px;transform:translate(-50%,-50%);background:var(--o);color:#000;border-radius:50%;display:grid;place-items:center;font-size:22px}
+.bawrap .tg{position:absolute;top:20px;padding:6px 14px;background:#0009;border-radius:99px;font-size:12px;letter-spacing:.2em;backdrop-filter:blur(6px)}
+@media(max-width:700px){.bawrap{aspect-ratio:4/5}}
+/* pricing */
+.pricing{padding:14vh 0;background:radial-gradient(ellipse at 50% 0,#ff6a1318,transparent 60%)}
+.toggles{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.seg{display:inline-flex;padding:5px;border:1px solid var(--line);border-radius:99px;position:relative}
+.seg button{padding:11px 22px;border-radius:99px;font-size:14px;font-weight:500;position:relative;z-index:1;transition:color .3s;color:var(--mute)}
+.seg button.on{color:#0a0a0a}
+.seg .pill{position:absolute;top:5px;bottom:5px;border-radius:99px;background:var(--o);transition:all .5s var(--ease)}
+.seg .save{font-size:10px;margin-left:6px;padding:2px 7px;border-radius:99px;background:#ffffff1a;color:var(--o2)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{border:1px solid var(--line);border-radius:22px;padding:36px 30px;background:var(--bg2);display:flex;flex-direction:column;position:relative;transition:transform .5s var(--ease),border-color .4s}
+.plan:hover{transform:translateY(-8px);border-color:#ffffff33}
+.plan.pop{border-color:var(--o);background:linear-gradient(180deg,#ff6a1314,var(--bg2))}
+.plan .rib{position:absolute;top:-12px;left:30px;background:var(--o);color:#000;font-size:11px;font-weight:700;letter-spacing:.15em;padding:5px 12px;border-radius:99px}
+.plan h3{font:400 34px Anton;text-transform:uppercase}
+.plan .sub{color:var(--mute);font-size:14px;min-height:44px}
+.plan .amt{font:400 68px Anton;margin:22px 0 2px;display:flex;align-items:flex-start;gap:4px}
+.plan .amt small{font-size:26px;margin-top:8px}
+.plan .per{color:var(--mute);font-size:13px}
+.plan .was{color:var(--mute);text-decoration:line-through;font-size:14px;height:20px}
+.plan ul{list-style:none;margin:26px 0 30px;display:grid;gap:12px;font-size:14px;color:#d4d5d8;flex:1}
+.plan li{display:flex;gap:10px}.plan li:before{content:"✦";color:var(--o)}
+.plan .btn{justify-content:center}
+.note{margin-top:22px;color:var(--mute);font-size:13px}
+@media(max-width:960px){.plans{grid-template-columns:1fr}}
+/* offers */
+.offers{padding:4vh 0 14vh}
+.ogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.offer{border-radius:20px;padding:28px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--bg2)}
+.offer .mo{font-size:12px;letter-spacing:.3em;color:var(--o)}
+.offer h4{font:400 40px Anton;text-transform:uppercase;line-height:.95;margin:12px 0}
+.offer p{color:var(--mute);font-size:14px}
+.offer .big{font:400 92px Anton;line-height:.8;color:transparent;-webkit-text-stroke:1.5px var(--o)}
+.offer.live{background:var(--o);color:#0a0a0a}.offer.live .mo,.offer.live p{color:#1a1a1a}.offer.live .big{-webkit-text-stroke-color:#0a0a0a}
+.offer .code{display:inline-block;border:1px dashed currentColor;padding:4px 10px;border-radius:6px;font:600 12px Inter;letter-spacing:.15em;margin-top:10px;cursor:copy}
+.cd{display:flex;gap:10px;margin-top:10px}.cd div{text-align:center}.cd b{font:400 34px Anton;display:block;line-height:1}.cd small{font-size:10px;letter-spacing:.15em}
+@media(max-width:1000px){.ogrid{grid-template-columns:1fr 1fr}}@media(max-width:600px){.ogrid{grid-template-columns:1fr}}
+/* process */
+.process{padding:14vh 0;border-top:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;counter-reset:s}
+.step{padding:28px 22px 0 0;border-top:2px solid var(--line);position:relative}
+.step:before{content:"";position:absolute;top:-2px;left:0;height:2px;width:var(--w,0%);background:var(--o)}
+.step b{font:400 22px Anton;text-transform:uppercase;display:block;margin:14px 0 8px}
+.step span{font:600 12px Inter;color:var(--o);letter-spacing:.2em}
+.step p{color:var(--mute);font-size:14px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:28px}}
+/* gallery */
+.gal{padding:4vh 0 14vh}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ggrid a{border-radius:14px;overflow:hidden;aspect-ratio:1;position:relative}
+.ggrid a:nth-child(1){grid-column:span 2;grid-row:span 2}
+.ggrid img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.ggrid a:hover img{transform:scale(1.07)}
+.ggrid a:after{content:"View on Instagram ↗";position:absolute;inset:auto 0 0;padding:14px;font-size:12px;background:linear-gradient(transparent,#000c);opacity:0;transition:.4s}
+.ggrid a:hover:after{opacity:1}
+@media(max-width:700px){.ggrid{grid-template-columns:1fr 1fr}}
+/* reviews */
+.revs{padding:10vh 0;overflow:hidden}
+.rtrack{display:flex;gap:16px;width:max-content;animation:mq 50s linear infinite}
+.revs:hover .rtrack{animation-play-state:paused}
+.rev{width:380px;padding:28px;border:1px solid var(--line);border-radius:18px;background:var(--bg2)}
+.rev .st{color:var(--o);letter-spacing:4px}.rev p{margin:14px 0;color:#d4d5d8}.rev b{font-size:14px}.rev span{color:var(--mute);font-size:13px}
+/* faq */
+.faq{padding:12vh 0}
+.fgrid{display:grid;grid-template-columns:1fr 1.4fr;gap:6vw}
+details{border-bottom:1px solid var(--line);padding:24px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font-size:19px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--o);font-size:26px;line-height:1;transition:transform .4s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{color:var(--mute);margin-top:12px;max-width:640px}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr}}
+/* booking */
+.book{padding:14vh 0;background:var(--bg2);overflow:hidden}
+.book .bigt{font-size:clamp(70px,15vw,260px);white-space:nowrap;line-height:.85}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;margin-top:8vh}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .full{grid-column:1/-1}
+label{font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--mute);display:grid;gap:8px}
+input,select,textarea{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:15px 16px;color:var(--fg);font:400 15px Inter;outline:none;transition:border-color .3s;width:100%}
+input:focus,select:focus,textarea:focus{border-color:var(--o)}
+select option{background:var(--bg)}
+.info{display:grid;gap:28px;align-content:start}
+.info div span{font-size:12px;letter-spacing:.2em;color:var(--o);text-transform:uppercase}
+.info div p,.info div a{font-size:20px;display:block;margin-top:6px}
+.map{border-radius:16px;overflow:hidden;filter:grayscale(1) invert(.92) contrast(.9);height:240px;border:0;width:100%}
+@media(max-width:900px){.bgrid,form{grid-template-columns:1fr}}
+footer{padding:60px 0 30px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;color:var(--mute);font-size:14px}
+footer .huge{font-size:clamp(60px,17vw,300px);color:transparent;-webkit-text-stroke:1px #ffffff1a;text-align:center;margin-bottom:30px;white-space:nowrap}
+.fab{position:fixed;right:20px;bottom:20px;z-index:80;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px #25d36655;transition:transform .3s}
+.fab:hover{transform:scale(1.1)}
+.toast{position:fixed;left:50%;bottom:30px;transform:translate(-50%,150%);background:var(--fg);color:#000;padding:12px 22px;border-radius:99px;font-size:14px;font-weight:600;z-index:130;transition:transform .5s var(--ease)}
+.toast.on{transform:translate(-50%,0)}
+.rv{opacity:0;transform:translateY(40px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="loader"><div class="ln d"><span>Crystal</span> <span class="o">Cars</span> <span>Spa</span></div><div class="bar"></div><div class="pct">000</div></div>
+<div id="cur"></div>
+
+<header id="hdr"><div class="wrap">
+  <a href="#hero" class="logo"><svg viewBox="0 0 64 40" fill="none"><path d="M4 30c2-8 8-13 18-15l8-7h14l9 8c5 1 7 4 7 9v5H4z" stroke="#ff6a13" stroke-width="2.4" stroke-linejoin="round"/><circle cx="17" cy="31" r="5" fill="#07080a" stroke="#f3f1ec" stroke-width="2.4"/><circle cx="48" cy="31" r="5" fill="#07080a" stroke="#f3f1ec" stroke-width="2.4"/><path d="M31 10l-6 6h26l-6-6z" fill="#ff6a13" opacity=".35"/></svg><span>Crystal Cars Spa<small>Detailing · Protection · Perfection</small></span></a>
+  <nav class="nav-links"><a href="#services">Services</a><a href="#plans">Memberships</a><a href="#offers">Offers</a><a href="#gallery">Work</a><a href="#book">Contact</a></nav>
+  <div class="nav-r">
+    <button class="ico" id="sbtn" aria-label="Search services"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="6"/><path d="M13 13l4 4"/></svg></button>
+    <a href="#book" class="btn btn-o">Book a Slot →</a>
+    <button class="ico burger" id="mbtn" aria-label="Menu"><div><span></span><span></span></div></button>
+  </div>
+</div></header>
+
+<div id="menu"><div class="wrap">
+  <nav class="d"><a href="#services"><span>Services</span></a><a href="#plans"><span>Yearly Plans</span></a><a href="#offers"><span>Offers</span></a><a href="#gallery"><span>Our Work</span></a><a href="#faq"><span>FAQ</span></a><a href="#book"><span class="o">Book Now</span></a></nav>
+  <div class="meta"><a href="tel:+919824368818">+91 98243 68818</a><a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener">Instagram ↗</a><span>Shahalam Road, Danilimda, Ahmedabad</span></div>
+</div></div>
+
+<div id="search" role="dialog" aria-label="Search"><button class="ico close" id="sclose" aria-label="Close search">✕</button><div class="wrap">
+  <div class="eyebrow">Search services, plans &amp; offers</div>
+  <input id="sq" placeholder="Try “ceramic” or “bike”" autocomplete="off">
+  <div class="chips"><button>Foam wash</button><button>Bike</button><button>PPF</button><button>Interior</button><button>Yearly</button></div>
+  <div id="sres"></div>
+</div></div>
+
+<main>
+<section id="hero">
+  <div class="bg" id="hbg"></div><canvas id="drops"></canvas>
+  <div class="hero-badge"><svg viewBox="0 0 150 150"><defs><path id="c" d="M75 75m-58 0a58 58 0 1 1 116 0a58 58 0 1 1-116 0"/></defs><text fill="#f3f1ec" font-size="12.5" letter-spacing="4.2" font-family="Inter" font-weight="600"><textPath href="#c" textLength="360">CARS · BIKES · SCOOTERS · CARS · BIKES · SCOOTERS ·</textPath></text></svg><b>4.7★</b></div>
+  <div class="wrap">
+    <div class="eyebrow hero-in">Ahmedabad's detailing studio · Est. 2023</div>
+    <h1 class="d"><span class="l"><span>Clean today.</span></span><span class="l"><span class="stroke">Shine</span> <span class="o">everyday.</span></span></h1>
+    <div class="hero-row hero-in">
+      <p>Touchless foam wash, deep interiors, ceramic &amp; Teflon coating, PPF and wraps — for every car, superbike, scooter and moped that rolls into our bay.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a href="#book" class="btn btn-o">Book your wash →</a><a href="#plans" class="btn btn-g">See yearly plans</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq"><div class="t" aria-hidden="true">
+<span>Foam Wash ✦ <i>Ceramic</i> ✦ PPF ✦ <i>Teflon</i> ✦ Wrapping ✦ <i>Polishing</i> ✦ Interior ✦ Bikes ✦ </span><span>Foam Wash ✦ <i>Ceramic</i> ✦ PPF ✦ <i>Teflon</i> ✦ Wrapping ✦ <i>Polishing</i> ✦ Interior ✦ Bikes ✦ </span>
+</div></div>
+
+<section class="intro"><div class="wrap">
+  <div class="eyebrow">We don't just wash</div><br>
+  <h2 class="d" id="manifesto">We care. Every panel, every seat, every spoke — treated like it's going to a showroom, not back to Shahalam traffic.</h2>
+  <div class="stats">
+    <div><b><span class="cnt" data-n="4.7">0</span><em>★</em></b><span>Google rating</span></div>
+    <div><b><span class="cnt" data-n="12">0</span><em>+</em></b><span>Services under one roof</span></div>
+    <div><b><span class="cnt" data-n="3">0</span></b><span>Vehicle types — car, bike, scooter</span></div>
+    <div><b><span class="cnt" data-n="100">0</span><em>%</em></b><span>Touchless, scratch-safe wash</span></div>
+  </div>
+</div></section>
+
+<section class="veh" id="vehicles"><div class="wrap">
+  <div class="sec-h"><h2 class="d rv">Two wheels.<br><span class="o">Four wheels.</span></h2><p style="max-width:360px;color:var(--mute)" class="rv">Not just a car spa. Superbikes, commuters, scooters and mopeds get the same pH-neutral foam and the same obsessive finish.</p></div>
+  <div class="vgrid">
+    <a href="#plans" class="vcard rv" data-v="car"><img src="img/bmw.jpg" alt="Sedan detailed at Crystal Cars Spa"><span class="n">01 / CARS</span><div class="cap"><b>Cars &amp; SUVs</b><span>Hatchbacks to Fortuners — wash, coat, protect.</span></div></a>
+    <a href="#plans" class="vcard rv" data-v="bike"><img src="img/ktm.jpg" alt="Superbike detailing"><span class="n">02 / BIKES</span><div class="cap"><b>Bikes</b><span>Chain-safe wash, tank polish, ceramic.</span></div></a>
+    <a href="#plans" class="vcard rv" data-v="scooty"><img src="img/ride.jpg" alt="Scooter and moped care"><span class="n">03 / SCOOTERS</span><div class="cap"><b>Scooters &amp; Mopeds</b><span>Daily riders, daily shine.</span></div></a>
+  </div>
+</div></section>
+
+<section id="services"><div class="hpin"><div class="wrap" style="margin-bottom:5vh"><div class="eyebrow">The menu</div><h2 class="d" style="font-size:clamp(48px,7vw,110px);margin-top:14px">Services</h2></div>
+<div class="htrack" id="htrack"></div></div></section>
+
+<section class="ba"><div class="wrap">
+  <div class="sec-h"><h2 class="d rv">Before <span class="o">vs</span> after</h2><p style="max-width:360px;color:var(--mute)">Drag the handle. One detail, endless impact — the difference speaks for itself.</p></div>
+  <div class="bawrap" id="ba"><img class="bef" src="img/muscle.jpg" alt="Before detailing"><img class="aft" src="img/muscle.jpg" alt="After detailing"><div class="hd"></div><span class="tg" style="left:20px">BEFORE</span><span class="tg" style="right:20px">AFTER</span></div>
+</div></section>
+
+<section class="pricing" id="plans"><div class="wrap">
+  <div class="sec-h"><div><div class="eyebrow">Memberships</div><h2 class="d" style="margin-top:14px">Yearly <span class="o">shine</span> plans</h2></div><p style="max-width:380px;color:var(--mute)">Lock in a year of care. Pay once, wash on schedule, save up to 30% over pay-per-visit.</p></div>
+  <div class="toggles">
+    <div class="seg" id="vseg"><span class="pill"></span><button class="on" data-v="car">Car</button><button data-v="bike">Bike</button><button data-v="scooty">Scooter</button></div>
+    <div class="seg" id="bseg"><span class="pill"></span><button data-b="m">Monthly</button><button class="on" data-b="y">Yearly <span class="save">−30%</span></button></div>
+  </div>
+  <div class="plans" id="plangrid"></div>
+  <p class="note">* Demo pricing for presentation — final rates set by Crystal Cars Spa. Prices incl. GST.</p>
+</div></section>
+
+<section class="offers" id="offers"><div class="wrap">
+  <div class="sec-h"><div><div class="eyebrow">All year round</div><h2 class="d" style="margin-top:14px">Offers <span class="o">calendar</span></h2></div><p style="max-width:380px;color:var(--mute)">A reason to shine every season. Tap a code to copy it, show it at the counter.</p></div>
+  <div class="ogrid">
+    <div class="offer live rv"><div><div class="mo">LIVE NOW · DIWALI</div><h4>Festive<br>Shine Pack</h4><p>Foam wash + interior + wax at a festive price. Ends in:</p><div class="cd" id="cd"></div></div><div><span class="big">25%</span><br><span class="code" data-c="DIWALI25">DIWALI25</span></div></div>
+    <div class="offer rv"><div><div class="mo">JUN – SEP · MONSOON</div><h4>Barish ka<br>mausam</h4><p>Underbody anti-rust wash + Teflon coat. Apni car ka khaas dhyaan.</p></div><div><span class="big">₹999</span><br><span class="code" data-c="MONSOON">MONSOON</span></div></div>
+    <div class="offer rv"><div><div class="mo">EVERY MONTH · 2-WHEELERS</div><h4>Bike<br>Sunday</h4><p>Every Sunday, bike &amp; scooter foam wash for half price. Bring a friend.</p></div><div><span class="big">50%</span><br><span class="code" data-c="BIKESUNDAY">BIKESUNDAY</span></div></div>
+    <div class="offer rv"><div><div class="mo">ANY TIME · REFERRAL</div><h4>Refer a<br>ride</h4><p>Refer a friend — both of you get a free interior vacuum on the next visit.</p></div><div><span class="big">FREE</span><br><span class="code" data-c="CRYSTALFAM">CRYSTALFAM</span></div></div>
+  </div>
+</div></section>
+
+<section class="process"><div class="wrap">
+  <div class="sec-h"><h2 class="d rv">The <span class="o">ritual</span></h2><p style="max-width:360px;color:var(--mute)">Five stages. Zero shortcuts.</p></div>
+  <div class="steps" id="steps">
+    <div class="step"><span>01</span><b>Inspect</b><p>Paint-depth check, swirl &amp; scratch mapping under LED.</p></div>
+    <div class="step"><span>02</span><b>Pre-rinse</b><p>High-pressure touchless rinse lifts grit before any contact.</p></div>
+    <div class="step"><span>03</span><b>Snow foam</b><p>pH-neutral foam dwell, two-bucket hand wash.</p></div>
+    <div class="step"><span>04</span><b>Correct</b><p>Machine polish, decon, interior steam &amp; vacuum.</p></div>
+    <div class="step"><span>05</span><b>Protect</b><p>Wax, Teflon, ceramic or PPF — sealed to shine.</p></div>
+  </div>
+</div></section>
+
+<section class="gal" id="gallery"><div class="wrap">
+  <div class="sec-h"><div><div class="eyebrow">@crystal_cars_spa</div><h2 class="d" style="margin-top:14px">From the <span class="o">bay</span></h2></div><a class="btn btn-g" href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener">Follow on Instagram ↗</a></div>
+  <div class="ggrid">
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/wash.jpg" alt="Hand wash" loading="lazy"></a>
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/ig2.jpg" alt="Touchless wash launch" loading="lazy"></a>
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/ig5.jpg" alt="Before vs after" loading="lazy"></a>
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/ig7.jpg" alt="Superbikes at the spa" loading="lazy"></a>
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/ig3.jpg" alt="Deep interior cleaning" loading="lazy"></a>
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/ig8.jpg" alt="Fortuner delivery" loading="lazy"></a>
+    <a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener"><img src="img/ig6.jpg" alt="Washing and polishing" loading="lazy"></a>
+  </div>
+</div></section>
+
+<section class="revs"><div class="rtrack" id="rtrack"></div></section>
+
+<section class="faq" id="faq"><div class="wrap fgrid">
+  <div><div class="eyebrow">Questions</div><h2 class="d" style="font-size:clamp(48px,6vw,96px);margin-top:14px">Good to <span class="o">know</span></h2></div>
+  <div>
+    <details open><summary>Do you wash bikes and scooters too?</summary><p>Yes — every two-wheeler from mopeds and scooters to superbikes. We use chain-safe degreasers and cover electricals before the foam.</p></details>
+    <details><summary>How long does a ceramic coating take?</summary><p>Usually 1–2 days including paint correction and curing. We'll give you an exact slot when you book.</p></details>
+    <details><summary>Is the touchless wash really scratch-free?</summary><p>High-pressure rinse and snow foam remove grit before anything touches the paint — so no swirl marks, safe for coated and PPF cars.</p></details>
+    <details><summary>Ceramic vs Teflon vs PPF — which one do I need?</summary><p>Teflon is an affordable 3–6 month gloss shield. Ceramic bonds for 1–3 years with deep water beading. PPF is a physical film that stops stone chips and scratches. Ask us — we'll recommend by budget and usage.</p></details>
+    <details><summary>Can I pay for a yearly plan in instalments?</summary><p>Yearly plans are paid once for the biggest saving; monthly plans are billed month to month. UPI, cards and cash accepted.</p></details>
+  </div>
+</div></section>
+
+<section class="book" id="book">
+  <div class="bigt d" id="bigt">Book your <span class="o">shine</span> — Book your <span class="o">shine</span> —</div>
+  <div class="wrap bgrid">
+    <form id="bform">
+      <label>Name<input name="n" required placeholder="Your name"></label>
+      <label>Phone<input name="p" required type="tel" pattern="[0-9 +]{10,14}" placeholder="98xxxxxxxx"></label>
+      <label>Vehicle<select name="v"><option>Car / SUV</option><option>Bike</option><option>Scooter / Moped</option></select></label>
+      <label>Date<input name="d" type="date" required></label>
+      <label class="full">Service<select name="s" id="fsvc"></select></label>
+      <label class="full">Notes<textarea name="m" rows="3" placeholder="Model, offer code, anything we should know"></textarea></label>
+      <button class="btn btn-o full" style="justify-content:center">Confirm on WhatsApp →</button>
+    </form>
+    <div class="info">
+      <div><span>Call / WhatsApp</span><a href="tel:+919824368818">+91 98243 68818</a></div>
+      <div><span>Studio</span><p>Shop no. 1–2, Sabdar Apartment, opp. Chandola Lake, Shahalam Road, Danilimda, Ahmedabad 380028</p></div>
+      <iframe class="map" loading="lazy" title="Map" src="https://www.google.com/maps?q=Crystal+Cars+Spa+Shahalam+Danilimda+Ahmedabad&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="huge d">Crystal Cars Spa</div><div class="wrap"><span>© 2026 Crystal Cars Spa · Ahmedabad</span><span><a href="https://www.instagram.com/crystal_cars_spa/" target="_blank" rel="noopener">Instagram</a> · <a href="https://wa.me/919824368818" target="_blank" rel="noopener">WhatsApp</a> · <a href="tel:+919824368818">Call</a></span><span>Demo by KORTIQ</span></div></footer>
+
+<a class="fab" href="https://wa.me/919824368818" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.7-.2 1.3z"/></svg></a>
+<div class="toast" id="toast"></div>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const WA='919824368818';
+const toast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),2200)};
+
+/* ---------- data ---------- */
+const SERVICES=[
+ {k:'Premium Foam Wash',d:'Touchless pre-rinse, snow foam, two-bucket hand wash, tyre dressing.',t:['Exterior','Scratch-safe','45 min'],p:{car:499,bike:199,scooty:149}},
+ {k:'Deep Interior Cleaning',d:'Vacuum, steam sanitise, dashboard & leather care, odour elimination.',t:['Interior','Germ-free','2 hrs'],p:{car:1499,bike:0,scooty:0}},
+ {k:'Ceramic Coating',d:'9H nano-ceramic bonded after paint correction. Mirror gloss, deep beading.',t:['Protection','1–3 yrs','Hot'],p:{car:14999,bike:4999,scooty:3499},hl:1},
+ {k:'PPF',d:'Self-healing paint protection film against stone chips, scratches and UV.',t:['Film','Self-healing','5 yrs'],p:{car:49999,bike:9999,scooty:6999}},
+ {k:'Teflon Coating',d:'Affordable gloss shield that repels dust and water for months.',t:['Protection','3–6 mo'],p:{car:2999,bike:999,scooty:799}},
+ {k:'Wrapping',d:'Full or partial colour-change vinyl wraps, matte, satin, chrome.',t:['Style','Reversible'],p:{car:34999,bike:6999,scooty:4999}},
+ {k:'Polishing',d:'Machine compound & polish to remove swirls, oxidation and light scratches.',t:['Correction','Showroom finish'],p:{car:2499,bike:799,scooty:599}},
+ {k:'Underbody Anti-rust',d:'Monsoon-ready underbody wash and rubberised anti-rust coat.',t:['Monsoon','Rust-proof'],p:{car:1999,bike:499,scooty:399}},
+];
+const PLANS={
+ car:[{n:'Silver',s:'For the daily commuter.',m:1199,f:['2 foam washes / month','Interior vacuum each visit','Tyre & dash dressing','Priority slots']},
+      {n:'Gold',s:'Our most-loved yearly plan.',m:2199,pop:1,f:['4 foam washes / month','1 deep interior / quarter','Teflon coat twice a year','Free pick-up & drop (5 km)','10% off ceramic & PPF']},
+      {n:'Crystal',s:'Showroom condition, all year.',m:3999,f:['Unlimited foam washes','Monthly deep interior','Annual ceramic top-up','Free pick-up & drop','20% off PPF & wraps']}],
+ bike:[{n:'Silver',s:'Weekend rider basics.',m:399,f:['2 foam washes / month','Chain clean & lube','Tyre dressing']},
+      {n:'Gold',s:'Built for daily riders.',m:699,pop:1,f:['4 foam washes / month','Chain service each visit','Teflon coat twice a year','10% off bike ceramic']},
+      {n:'Crystal',s:'For superbikes that must gleam.',m:1199,f:['Unlimited foam washes','Monthly polish','Annual ceramic top-up','20% off PPF & wraps']}],
+ scooty:[{n:'Silver',s:'Keep it fresh.',m:299,f:['2 foam washes / month','Seat & floorboard clean']},
+      {n:'Gold',s:'Daily ride, daily shine.',m:499,pop:1,f:['4 foam washes / month','Teflon coat twice a year','Free puncture check']},
+      {n:'Crystal',s:'Family two-wheeler pack.',m:899,f:['Covers 2 scooters','Unlimited foam washes','Annual ceramic top-up']}]
+};
+const REVIEWS=[['Touchless wash is next level — my black City looks wet even after a week.','Imran S.','Car · Honda City'],['Got my Duke ceramic coated, the tank shines like a mirror. Very professional team.','Rahul P.','Bike · KTM Duke'],['Interior deep clean removed smells I thought were permanent. Worth every rupee.','Farhan K.','SUV · Fortuner'],['They washed my Activa with the same care as the cars. Fair prices.','Sana M.','Scooter · Activa'],['PPF done perfectly, no edges lifting. Pick-up and drop was super convenient.','Vikram D.','Car · Creta']];
+const inr=n=>'₹'+n.toLocaleString('en-IN');
+
+/* ---------- render ---------- */
+$('#htrack').innerHTML=SERVICES.map((s,i)=>`<article class="scard${s.hl?' hl':''}" id="svc-${i}"><div class="num">0${i+1}</div><div><h3>${s.k}</h3><p>${s.d}</p><ul>${s.t.map(t=>`<li>${t}</li>`).join('')}</ul><div class="pr"><span>from</span><b>${inr(s.p.car)}</b></div></div></article>`).join('');
+$('#fsvc').innerHTML=SERVICES.map(s=>`<option>${s.k}</option>`).join('')+['Silver','Gold','Crystal'].map(p=>`<option>${p} yearly plan</option>`).join('');
+$('#rtrack').innerHTML=[...REVIEWS,...REVIEWS].map(r=>`<div class="rev"><div class="st">★★★★★</div><p>“${r[0]}”</p><b>${r[1]}</b> <span>· ${r[2]}</span></div>`).join('');
+
+let veh='car',bill='y';
+function renderPlans(){
+  $('#plangrid').innerHTML=PLANS[veh].map(p=>{const y=Math.round(p.m*12*.7/100)*100-1;return `<div class="plan${p.pop?' pop':''}">${p.pop?'<span class="rib">MOST POPULAR</span>':''}<h3>${p.n}</h3><p class="sub">${p.s}</p>
+  <div class="was">${bill=='y'?inr(p.m*12)+' / yr':''}</div><div class="amt"><small>₹</small>${(bill=='y'?y:p.m).toLocaleString('en-IN')}</div><div class="per">${bill=='y'?'per year · ≈ '+inr(Math.round(y/12))+'/mo':'per month'}</div>
+  <ul>${p.f.map(f=>`<li>${f}</li>`).join('')}</ul><a href="#book" class="btn ${p.pop?'btn-o':'btn-g'}" data-plan="${p.n} yearly plan">Choose ${p.n} →</a></div>`}).join('');
+  gsap.from('.plan',{y:30,opacity:0,stagger:.08,duration:.7,ease:'expo.out'});
+}
+function seg(el,cb){const pill=el.querySelector('.pill');const mv=b=>{pill.style.left=b.offsetLeft+'px';pill.style.width=b.offsetWidth+'px'};
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{el.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');mv(b);cb(b)});
+  requestAnimationFrame(()=>mv(el.querySelector('.on')));addEventListener('resize',()=>mv(el.querySelector('.on')))}
+seg($('#vseg'),b=>{veh=b.dataset.v;renderPlans()});seg($('#bseg'),b=>{bill=b.dataset.b;renderPlans()});
+document.addEventListener('click',e=>{const a=e.target.closest('[data-plan]');if(a)$('#fsvc').value=a.dataset.plan;
+  const v=e.target.closest('.vcard');if(v){const b=$(`#vseg [data-v="${v.dataset.v}"]`);b&&b.click()}
+  const c=e.target.closest('.code');if(c){navigator.clipboard?.writeText(c.dataset.c);toast('Code '+c.dataset.c+' copied')}});
+
+/* countdown to Diwali offer end (deterministic target) */
+const END=new Date('2026-11-10T23:59:59+05:30');
+function tick(){let s=Math.max(0,(END-new Date())/1000|0);const u=[[86400,'DAYS'],[3600,'HRS'],[60,'MIN'],[1,'SEC']].map(([d,l])=>{const v=s/d|0;s%=d;return `<div><b>${String(v).padStart(2,'0')}</b><small>${l}</small></div>`});$('#cd').innerHTML=u.join('')}
+tick();setInterval(tick,1000);
+
+/* ---------- search ---------- */
+const IDX=[...SERVICES.map((s,i)=>({t:s.k,s:s.d+' '+s.t.join(' '),tag:'Service · from '+inr(s.p.car),h:'#svc-'+i})),
+ ...['Silver','Gold','Crystal'].map(n=>({t:n+' membership',s:'yearly monthly plan car bike scooter subscription',tag:'Yearly plan',h:'#plans'})),
+ {t:'Diwali Festive Shine Pack',s:'offer discount festive 25%',tag:'Offer · DIWALI25',h:'#offers'},{t:'Monsoon underbody + Teflon',s:'offer rain barish anti-rust',tag:'Offer · MONSOON',h:'#offers'},
+ {t:'Bike Sunday — 50% off',s:'offer two wheeler bike scooter moped',tag:'Offer · BIKESUNDAY',h:'#offers'},{t:'Bikes & scooters',s:'two wheeler moped activa superbike',tag:'Vehicles',h:'#vehicles'},
+ {t:'Book a slot',s:'appointment contact whatsapp call booking',tag:'Contact',h:'#book'},{t:'Location & timings',s:'address map shahalam danilimda ahmedabad',tag:'Contact',h:'#book'}];
+function runSearch(q){q=q.trim().toLowerCase();const r=q?IDX.filter(x=>(x.t+' '+x.s).toLowerCase().includes(q)):IDX.slice(0,6);
+  $('#sres').innerHTML=r.length?r.map(x=>`<a href="${x.h}"><b>${x.t}</b><span class="tag">${x.tag}</span></a>`).join(''):`<p style="color:var(--mute);padding:20px">No match for “${q.replace(/</g,'')}” — <a class="o" href="https://wa.me/${WA}">ask us on WhatsApp</a>.</p>`}
+const openS=()=>{$('#search').classList.add('on');runSearch('');setTimeout(()=>$('#sq').focus(),100)},closeS=()=>$('#search').classList.remove('on');
+$('#sbtn').onclick=openS;$('#sclose').onclick=closeS;$('#sq').oninput=e=>runSearch(e.target.value);
+$$('.chips button').forEach(b=>b.onclick=()=>{$('#sq').value=b.textContent;runSearch(b.textContent)});
+$('#sres').addEventListener('click',e=>{if(e.target.closest('a[href^="#"]'))closeS()});
+addEventListener('keydown',e=>{if(e.key==='Escape'){closeS();document.body.classList.remove('menu-open')}if(e.key==='/'&&document.activeElement.tagName!=='INPUT'&&document.activeElement.tagName!=='TEXTAREA'){e.preventDefault();openS()}});
+
+/* ---------- menu ---------- */
+$('#mbtn').onclick=()=>document.body.classList.toggle('menu-open');
+$$('#menu a[href^="#"]').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('menu-open')));
+
+/* ---------- booking -> WhatsApp ---------- */
+$('[name=d]').min=new Date().toISOString().slice(0,10);
+$('#bform').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));
+  const msg=`Hi Crystal Cars Spa! I'd like to book:\n• Name: ${f.n}\n• Phone: ${f.p}\n• Vehicle: ${f.v}\n• Service: ${f.s}\n• Date: ${f.d}${f.m?'\n• Notes: '+f.m:''}`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank','noopener')};
+
+/* ---------- before/after ---------- */
+(()=>{const w=$('#ba');let down=0;const set=x=>{const r=w.getBoundingClientRect();w.style.setProperty('--p',Math.min(100,Math.max(0,(x-r.left)/r.width*100))+'%')};
+ w.addEventListener('pointerdown',e=>{down=1;set(e.clientX)});addEventListener('pointerup',()=>down=0);w.addEventListener('pointermove',e=>{if(down||e.pointerType==='mouse')set(e.clientX)})})();
+
+/* ---------- cursor + card glow ---------- */
+const cur=$('#cur');addEventListener('pointermove',e=>{cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px'});
+document.addEventListener('pointerover',e=>cur.classList.toggle('big',!!e.target.closest('a,button,.bawrap,.code')));
+document.addEventListener('pointermove',e=>{const c=e.target.closest('.scard');if(c){const r=c.getBoundingClientRect();c.style.setProperty('--mx',e.clientX-r.left+'px');c.style.setProperty('--my',e.clientY-r.top+'px')}});
+
+/* ---------- hero water droplets ---------- */
+(()=>{const c=$('#drops'),x=c.getContext('2d');let W,H,D=[];const rs=()=>{W=c.width=c.offsetWidth;H=c.height=c.offsetHeight};rs();addEventListener('resize',rs);
+ for(let i=0;i<70;i++)D.push({x:(i*137.5)%1,y:(i*61.8)%1,v:.6+(i%7)*.25,l:8+(i%5)*6});
+ (function f(){x.clearRect(0,0,W,H);x.strokeStyle='rgba(255,255,255,.18)';x.lineWidth=1;D.forEach(d=>{d.y+=d.v/H*4;if(d.y>1)d.y=0;x.beginPath();x.moveTo(d.x*W,d.y*H);x.lineTo(d.x*W-2,d.y*H+d.l);x.stroke()});requestAnimationFrame(f)})()})();
+
+/* ---------- smooth scroll + GSAP ---------- */
+gsap.registerPlugin(ScrollTrigger);
+const lenis=new Lenis({lerp:.09});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a&&a.getAttribute('href').length>1){e.preventDefault();lenis.scrollTo(a.getAttribute('href'),{offset:-60,duration:1.4})}});
+addEventListener('scroll',()=>$('#hdr').classList.toggle('solid',scrollY>40),{passive:true});
+
+// loader -> hero intro
+const ld={v:0};
+gsap.timeline()
+ .from('#loader .ln span',{yPercent:110,stagger:.08,duration:.8,ease:'expo.out'})
+ .to(ld,{v:100,duration:1.2,ease:'power2.inOut',onUpdate:()=>{$('#loader .pct').textContent=String(ld.v|0).padStart(3,'0');$('#loader .bar').style.width=ld.v+'%'}},0)
+ .to('#loader',{yPercent:-100,duration:1,ease:'expo.inOut'})
+ .from('#hero h1 .l>span',{yPercent:115,stagger:.12,duration:1.2,ease:'expo.out'},'-=.5')
+ .from('#hbg',{scale:1.25,duration:2,ease:'expo.out'},'<')
+ .from('.hero-in,.hero-badge',{y:30,opacity:0,stagger:.1,duration:1,ease:'expo.out'},'-=1.4')
+ .set('#loader',{display:'none'});
+
+gsap.to('#hbg',{yPercent:18,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+gsap.to('#hero h1',{yPercent:-30,opacity:.2,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+
+// manifesto word reveal
+const m=$('#manifesto');m.innerHTML=m.textContent.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
+gsap.to('#manifesto .w',{opacity:1,stagger:.1,ease:'none',scrollTrigger:{trigger:m,start:'top 80%',end:'bottom 45%',scrub:true}});
+
+// counters
+$$('.cnt').forEach(c=>{const n=+c.dataset.n,dec=n%1?1:0;ScrollTrigger.create({trigger:c,start:'top 90%',once:true,onEnter:()=>gsap.to({v:0},{v:n,duration:2,ease:'power3.out',onUpdate(){c.textContent=this.targets()[0].v.toFixed(dec)}})})});
+
+// generic reveals
+$$('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1.1,ease:'expo.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+$$('.vcard img').forEach(i=>gsap.to(i,{yPercent:-8,ease:'none',scrollTrigger:{trigger:i.parentNode,scrub:true}}));
+
+// horizontal services (desktop only)
+ScrollTrigger.matchMedia({'(min-width:801px)':()=>{const t=$('#htrack');
+  gsap.to(t,{x:()=>-(t.scrollWidth-innerWidth+40),ease:'none',scrollTrigger:{trigger:'#services',pin:'.hpin',scrub:1,end:()=>'+='+(t.scrollWidth-innerWidth),invalidateOnRefresh:true}})}});
+
+// process line fill
+$$('.step').forEach((s,i)=>gsap.to(s,{'--w':'100%',duration:1,delay:i*.15,ease:'power2.out',scrollTrigger:{trigger:'#steps',start:'top 80%'}}));
+// booking big text drift
+gsap.fromTo('#bigt',{xPercent:5},{xPercent:-35,ease:'none',scrollTrigger:{trigger:'#book',scrub:true}});
+gsap.from('.ggrid a',{y:60,opacity:0,stagger:.07,duration:1,ease:'expo.out',scrollTrigger:{trigger:'.ggrid',start:'top 85%'}});
+
+renderPlans();
+</script>
+</body>
+</html>
